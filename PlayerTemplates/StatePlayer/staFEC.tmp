@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl7cg1rewn2wq"]
+
+[ext_resource type="Script" path="res://PlayerTemplates/StatePlayer/Player.gd" id="1_liauh"]
+[ext_resource type="Texture2D" uid="uid://bhgsy4miqwudk" path="res://icon.svg" id="2_obf67"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2q662"]
+radius = 63.3877
+
+[sub_resource type="LabelSettings" id="LabelSettings_dc1p3"]
+font_size = 20
+
+[node name="StatePlayer" type="CharacterBody2D"]
+script = ExtResource("1_liauh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_obf67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2q662")
+
+[node name="ground_ray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 72)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 48.0
+offset_top = -112.0
+offset_right = 88.0
+offset_bottom = -89.0
+text = "lmao"
+label_settings = SubResource("LabelSettings_dc1p3")

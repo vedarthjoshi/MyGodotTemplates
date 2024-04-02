@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://djfj0ggln8sjx"]
+
+[ext_resource type="PackedScene" uid="uid://biavi6atp1suc" path="res://PlayerTemplates/Player/player.tscn" id="1_mr5g6"]
+[ext_resource type="Texture2D" uid="uid://bhgsy4miqwudk" path="res://icon.svg" id="2_2qgji"]
+[ext_resource type="PackedScene" uid="uid://bl7cg1rewn2wq" path="res://PlayerTemplates/StatePlayer/state_player.tscn" id="3_p1018"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eniy"]
+size = Vector2(1746, 70)
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="PlayerInstances" type="Node2D" parent="."]
+
+[node name="Player1" parent="PlayerInstances" instance=ExtResource("1_mr5g6")]
+
+[node name="StatePlayer" parent="PlayerInstances" instance=ExtResource("3_p1018")]
+position = Vector2(192, 0)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerInstances/StatePlayer"]
+position = Vector2(-192, 0)
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+position = Vector2(700, 592)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(13.5469, 0.546875)
+texture = ExtResource("2_2qgji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+shape = SubResource("RectangleShape2D_8eniy")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(2589, 331)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D2"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(13.5469, 0.546875)
+texture = ExtResource("2_2qgji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_8eniy")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(4618, -161)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/StaticBody2D3"]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(13.5469, 0.546875)
+texture = ExtResource("2_2qgji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_8eniy")
