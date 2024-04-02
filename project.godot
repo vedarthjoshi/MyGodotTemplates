@@ -11,10 +11,6 @@ config_version=5
 [application]
 
 config/name="MyGodotTemplates"
+run/main_scene="res://PlayerTemplates/test_world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true

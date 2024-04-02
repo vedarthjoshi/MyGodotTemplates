@@ -11,7 +11,7 @@ extends CharacterBody2D
 
 #setup Variables
 @export var MAX_SPEED: int = 1000
-@export var accelaration: float = 50
+@export var acceleration: float = 50
 
 var input: Vector2 = Vector2.ZERO
 
@@ -66,7 +66,7 @@ func _physics_process(delta: float) -> void:
 # IDLE STATE FUNCTIONS
 func idle():
 	
-	velocity.x = move_toward(velocity.x,0, accelaration)
+	velocity.x = move_toward(velocity.x,0, acceleration)
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
 		change_state(States.WALK)
 	
@@ -76,7 +76,7 @@ func idle():
 #WALK STATE FUNCTIONS
 func walk():
 	input.x = Input.get_axis("ui_left", "ui_right")
-	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, accelaration)
+	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, acceleration)
 	if !Input.is_anything_pressed():
 		change_state(States.IDLE)
 	if Input.is_action_just_pressed("ui_up"):
@@ -85,7 +85,7 @@ func walk():
 #JUMP STATE FUNCTIONS
 func jump():
 	input.x = Input.get_axis("ui_left", "ui_right")
-	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, accelaration)
+	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, acceleration)
 	if !jumped and can_jump():
 		jump_count -=1
 		velocity.y = jump_velocity

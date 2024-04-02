@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 #setup Variables
 @export var MAX_SPEED: int = 1000
-@export var accelaration: float = 50
+@export var acceleration: float = 50
 
 var input: Vector2 = Vector2.ZERO
 
@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	input.x = Input.get_axis("ui_left", "ui_right")
 	input = input.normalized()
 	
-	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, accelaration)
+	velocity.x = move_toward(velocity.x, MAX_SPEED * input.x, acceleration)
 	
 	if Input.is_action_just_pressed("ui_up") and can_jump():
 		jump()
