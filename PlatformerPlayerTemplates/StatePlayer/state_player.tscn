@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bl7cg1rewn2wq"]
 
-[ext_resource type="Script" path="res://PlayerTemplates/StatePlayer/Player.gd" id="1_liauh"]
+[ext_resource type="Script" path="res://PlatformerPlayerTemplates/StatePlayer/Player.gd" id="1_liauh"]
 [ext_resource type="Texture2D" uid="uid://bhgsy4miqwudk" path="res://icon.svg" id="2_obf67"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2q662"]

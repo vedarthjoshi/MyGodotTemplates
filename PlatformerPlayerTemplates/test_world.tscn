@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://djfj0ggln8sjx"]
 
-[ext_resource type="PackedScene" uid="uid://biavi6atp1suc" path="res://PlayerTemplates/Player/player.tscn" id="1_mr5g6"]
+[ext_resource type="PackedScene" uid="uid://biavi6atp1suc" path="res://PlatformerPlayerTemplates/Player/player.tscn" id="1_mr5g6"]
 [ext_resource type="Texture2D" uid="uid://bhgsy4miqwudk" path="res://icon.svg" id="2_2qgji"]
-[ext_resource type="PackedScene" uid="uid://bl7cg1rewn2wq" path="res://PlayerTemplates/StatePlayer/state_player.tscn" id="3_p1018"]
+[ext_resource type="PackedScene" uid="uid://bl7cg1rewn2wq" path="res://PlatformerPlayerTemplates/StatePlayer/state_player.tscn" id="3_p1018"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8eniy"]
 size = Vector2(1746, 70)
